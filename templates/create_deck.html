@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create a deck</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='create_deck.css') }}">
+</head>
+<body>
+    <main class="container">
+        <h1>Create New Deck</h1>
+
+        <form method="POST" enctype="multipart/form-data">
+            <label for="deck-title">Deck Title</label>
+            <input type = "text" id="deck-title" name = "deck-title" placeholder="Enter deck title" required>
+
+            <section class="flashcard">
+                <h2>Flashcard 1</h2>
+
+                <label for="question">Question</label>
+                <textarea id="question" name="question" required></textarea>
+
+                <label for="answer">Answer</label>
+                <textarea name="answer" id="answer" required></textarea>
+
+                <label for="image">Image (Optional)</label>
+                <input type="file" id="image" name="image" accept="image/*">
+            </section>
+
+            <button type="button"> + Add Another Flashcard</button>
+
+            <button type="submit">Save Deck</button>
+        </form>
+    </main>
+    
+</body>
+</html>
